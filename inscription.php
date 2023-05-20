@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_POST['submit'])) {
     // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=activigo', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=activigo', 'root', 'Roslan2002');
 
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
@@ -91,6 +91,6 @@ unset($_SESSION['error'], $_SESSION['message']);
     <button type="submit" name="submit">S'inscrire</button>
 </form>
 <p>Déjà un compte? <a href="connexion.php">Connectez-vous</a></p>
-<p><a href="index.php">Retourner au site</a></p>
+<p><a href="home.php">Retourner au site</a></p>
 </body>
 </html>

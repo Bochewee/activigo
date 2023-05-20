@@ -1,15 +1,14 @@
 <?php
-session_start();
+include "components/connect.php";
+
 
 if (isset($_POST['submit'])) {
     // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=activigo', 'root', '');
-
     $pseudo = $_POST['pseudo'];
     $password = $_POST['password'];
 
     // Vérification des identifiants
-    $stmt = $db->prepare('SELECT id, password FROM utilisateurs WHERE pseudo = :pseudo');
+    $stmt = $bdd->prepare('SELECT id, password FROM utilisateurs WHERE pseudo = :pseudo');
     $stmt->execute([':pseudo' => $pseudo]);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -34,17 +33,28 @@ unset($_SESSION['error']);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
+    <link rel="stylesheet" href="css/user_style.css">
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+
 </head>
 <body>
-<?php if ($error): ?>
-<p style="color: red;"><?php echo $error; ?></p>
-<?php endif; ?>
-<form action="connexion.php" method="post">
-    <input type="text" name="pseudo" placeholder="Pseudo" required>
-    <input type="password" name="password" placeholder="Mot de passe" required>
-    <button type="submit" name="submit">Se connecter</button>
-</form>
-<p>Pas de compte? <a href="inscription.php">Inscrivez-vous</a></p>
-<p><a href="index.php">Retourner au site</a></p>
+    <section class='form'>
+    <div class="form-container">
+        <form action="connexion.php" method="post">
+            <input type="text" name="pseudo" placeholder="Pseudo" required autocomplete='off' >
+            <br>
+            <input type="password" name="password" placeholder="Mot de passe" required autocomplete='off' >
+            <br>
+            <button type="submit" name="submit">Se connecter</button>
+        </form>
+        <p>Pas de compte? <a href="inscription.php">Inscrivez-vous</a></p>
+        <p><a href="home.php">Retourner au site</a></p>
+    </div>
+    </section>
 </body>
+</html>
+
 </html>
