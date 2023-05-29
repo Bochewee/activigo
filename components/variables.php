@@ -63,4 +63,3 @@ $footerBox2 = array(
 
     
 ?>
-?>

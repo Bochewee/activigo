@@ -37,6 +37,48 @@ if(isset($_SESSION['user_id'])){
 
 <!-- about section ends -->
 
+<!-- service section starts  -->
+<section class="services">
+    <div class="wrapper">
+       <h3>our service</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, beatae.</p>
+       <div class="content-box">
+          <div class="card">
+             <i class="fas fa-house"></i>
+             <h4>first service</h4>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ullam.</p>
+          </div>
+          <div class="card">
+             <i class="fas fa-heart"></i>
+             <h4>first service</h4>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ullam.</p>
+          </div>
+          <div class="card">
+             <i class="fas fa-house"></i>
+             <h4>first service</h4>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ullam.</p>
+          </div>
+          <div class="card">
+             <i class="fas fa-house"></i>
+             <h4>first service</h4>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ullam.</p>
+          </div>
+          <div class="card">
+             <i class="fas fa-house"></i>
+             <h4>first service</h4>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ullam.</p>
+          </div>
+          <div class="card">
+             <i class="fas fa-house"></i>
+             <h4>first service</h4>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ullam.</p>
+          </div>
+          
+       </div>
+    </div>
+  </section>
+    <!-- service section ends  -->
+
 <!-- steps section starts  -->
 
 <section class="steps">
@@ -184,15 +226,6 @@ if(isset($_SESSION['user_id'])){
 </section>
 
 <!-- review section ends -->
-
-
-
-
-
-
-
-
-
 
 <?php include 'components/footer.php'; ?>
 

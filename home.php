@@ -1,5 +1,4 @@
-<?php
-include "components/variables.php";
+<?php include "components/variables.php";
 include "components/connect.php";
 
 if(isset($_COOKIE['user_id'])){
@@ -7,24 +6,18 @@ if(isset($_COOKIE['user_id'])){
 } else {
     $user_id = '';
 }
-?>
-
-<?php define("TITLE","Home | $companyName");?>
-
+define("TITLE","Home | $companyName");?>
 <!-- head section  -->
 <?php include "components/user_head.php" ?>
-
-    
-
 <body>
     <!-- header section starts -->
-    <?php include 'components/user_header.php' ?>
+    <?php include 'components/user_header.php'?>
     <!-- header section ends -->
     
 <!-- Voir les annonces -->
 <img id='homeImg'src="img/homeImg" alt="home image">
 <!-- footer section starts  -->
-<?php include 'components/footer.php' ?>
+<?php include 'components/footer.php'?>
 <!-- footer section ends  -->
 
 <!-- JS -->

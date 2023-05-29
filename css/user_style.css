@@ -4,6 +4,8 @@
     --black:black;
     --border: 1px solid var(--main-color);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --light-bg:#FFFFF0;
+    
 }
 .posts-container {
     margin: 0 auto; 
@@ -11,6 +13,7 @@
 }
 .navbar {
     height: 80px ;
+    width: 100vw;
     background-color:var(--black) ;
     margin: 0 auto;
     padding: 20px;
@@ -139,6 +142,7 @@ li {
     height: 100vh;
     width: 100vw;
     background-size: cover;
+    position: relative;
 }
 /* connect form start  */
 
@@ -197,10 +201,168 @@ li {
     text-decoration: underline;
 }
 /* connect form end */
+
+/* about us start */
+
+/* about us end */
+
+/* services section starts */
+.services .wrapper{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+    background: var(--light-bg);
+}
+.services .wrapper h3{
+    font-size: 30px;
+    margin: 25px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.services .wrapper .content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.services .wrapper .content-box .card{
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-bg);
+    margin: 10px 4px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+
+}
+.services .wrapper .content-box .card i{
+    margin: 20px;
+    color: var(--main-color);
+}
+.services .wrapper .content-box .card h4{
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+.services .wrapper .content-box .card p{
+    color: var(--light-color);
+}
+.services .wrapper .content-box .card:hover i,
+.services .wrapper .content-box .card:hover p{
+    color: var(--white);
+}
+.services .wrapper .content-box .card:hover h4{
+    font-weight: 800;
+}
+.services .wrapper .content-box .card:hover{
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.8)0%,
+                                rgba(255,0,82,0.8)100%),
+                                url(../images/pexels-emre-can-acer-2079246.jpg);
+    background-size: cover;
+}
+/* services section ends */
+/* contact section start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bodyy{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background-color: #006400;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-in{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #666;
+    padding: 50px;
+}
+.contact-map{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+.contact-map a{
+    text-decoration: none;
+    color: #000;
+}
+.contact-form{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    padding: 30px;
+    text-align: center;
+}
+.contact-form h1 {
+  margin-bottom: 10px;
+}
+.contact-form-txt{
+    width: 100%;
+    height: 40px;
+    color: #000;
+    border:1px solid #bcbcbc ;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.contact-form-txt::placeholder{
+    color: #000;
+    font-weight: 600;
+}
+.contact-form-textarea{
+    width: 100%;
+    height: 130px;
+    color: #000;
+    border:1px solid #bcbcbc ;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-form-textarea::placeholder{
+    color: #000;
+    font-weight: 600
+}
+.contact-form-btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: #006400;
+    color: #000;
+    text-transform: uppercase;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* contact section end */
 /* footer section start */
 
 .footer{
     background-color: var(--black);
+    width: 100vw;
  }
  
  .footer .flex{
@@ -257,7 +419,7 @@ li {
      padding: 3rem 2rem;
      text-align: center;
      border-top: var(--border);
-     font-size: 2rem;
+     font-size: 23px;
      color: var(--white);
      margin-top: 2rem;
      /* padding-bottom: 10rem; */

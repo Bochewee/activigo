@@ -1,5 +1,5 @@
 <div class="navbar">
-        <h1>ActiviGo</h1>
+        <h1><a href="home.php">ActiviGo</a></h1>
         <div class="buttons">
             <?php if (isset($_SESSION['id'])):?>
                 <a href="mon_compte.php">Mon compte</a>

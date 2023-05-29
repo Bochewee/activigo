@@ -1,9 +1,8 @@
 <?php
-session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=activigo;charset=utf8', 'root', '');
+include "components/connect.php";
 
 if (!isset($_SESSION['id'])) {
-    header('Location: index.php');
+    header('Location: home.php');
     exit;
 }
 
@@ -142,7 +141,7 @@ a {
             <br>
             <input type="submit" name="submit" value="Mettre à jour">
         </form>
-        <a href="index.php">Retourner sur le site</a>
+        <a href="home.php">Retourner sur le site</a>
     </div>
 </body>
 </html>
