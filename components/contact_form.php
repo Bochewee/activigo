@@ -1,3 +1,43 @@
+<?php
+require 'includes/PHPMailer.php';
+require 'includes/SMTP.php';
+require 'includes/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+if(isset($_POST['submit'])){
+    $name= $_POST['name'];
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $subject= $_POST['subject'];
+    $subject = filter_var($subject, FILTER_SANITIZE_STRING);
+    $mailFrom= $_POST['email'];
+    $mailFrom = filter_var($mailFrom, FILTER_VALIDATE_EMAIL);
+    $message= $_POST['message'];
+    $message = filter_var($message, FILTER_SANITIZE_STRING);
+
+    $mail = new PHPMailer();
+    $mail->isSMTP();
+    $mail->Host = "smtp.gmail.com";
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = "tls";
+    $mail->Port = "587";
+    $mail->Username = "activigo.2023@gmail.com";
+    $mail->Password = "dtjhcridvrstxfxs";
+    $mail->Subject = "ceci est un message evoyer par".$mailFrom. "avec pour objet".$subject;
+    $mail->setFrom('activigo.2023@gmail.com');
+    $mail->Body = $message;
+    $mail->addAddress('activigo.2023@gmail.com');
+    if ($mail->send()) {
+        echo "Email Sent..!";
+    } else {
+        echo $mail->ErrorInfo;
+    }
+    $mail->smtpClose();
+
+}
+?>
 <div class="bodyy">
 <div class="contact-in">
     <div class="contact-map">
@@ -5,9 +45,9 @@
     <a href="mailto:support@ActiviGo.com">Email: support@ActiviGo.com</a> <br>
     <a href="tel:01010101010">Tel:010101001</a>
     </div>
-    <div class="contact-form">
+    <div class="contact-form" >
         <h1>Contact Us</h1>
-        <form action="components/submit_form.php" method="POST">
+        <form  method="POST">
             <input type="text" name="name" placeholder="Name" class="contact-form-txt">
             <input type="text" name="subject" placeholder="Subject" class="contact-form-txt">
             <input type="text" name="email" placeholder="Email" class="contact-form-txt">
